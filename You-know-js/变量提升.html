@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// foo();
+	// fucntion foo(){
+	// 	console.log( a );
+	// 	var a = 2;
+	// }
+
+	// 01
+	// function foo(){
+	// 	var a ;
+	// 	console.log( a );  //undefined
+	// 	a = 2;
+	// }
+	// foo();
+
+	// 函数优先
+	// foo();   //1 
+	// var foo;
+	// function foo(){
+	// 	console.log(1);
+	// }
+	// foo = fucntion(){
+	// 	console.log(2);
+	// }
+	// 这段代码被引擎理解为如下
+	// function foo(){
+	// 	console.log(1);
+	// }
+	// foo();  //1
+	// foo = function(){
+	// 	console.log(2);
+	// }
+
+
+	// 尽管 var foo 出现在function foo()...的声明之前,但是它被重复的声明了,(因此它被忽略了),因为函数声明会被提升到普通变量之前
+	// 
+	// 尽管重复声明的 var 声明会被忽略,但是出现在后面的函数声明还是可以覆盖前面的
+
+	foo();
+	function foo(){
+		console.log(1);
+	}
+	var foo = function (){
+		console.log(2);
+	}
+	function foo(){
+		console.log(3);
+	}
+</script>
+</html>

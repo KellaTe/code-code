@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// let声明附属属于一个新的作用域而不是当前的函数作用域,
+	for(let i = 0;i<10;i++){
+		console.log(i);
+	}
+	console.log(i);  //referenceerror
+	//for循环头部的let不仅将i 绑定到了for循环的块中,事实上它将其重新绑定到循环的每一个迭代中,确保使用上一个循环迭代结束时的值重新进行赋值.
+	// {
+	// 	let j ;
+	// 	for(j = 0; j<10;j++){
+	// 		let i = j; //每个重新迭代绑定
+	// 		console.log(i);
+	// 	}
+	// }
+</script>
+</html>

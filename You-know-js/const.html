@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//const,也可以创建块级作用域变量,但其值是固定的(常亮).
+	var foo = true;
+	if(foo){
+		var a = 2;
+		const b = 3; //包含在 if 中的块级作用域常量
+		a = 3;  //正常!!
+		b = 4;  //错误!!
+	}
+	console.log(a); //3
+	console.log(b); // ReferenceError!
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// for(var i = 1; i <= 5; i ++){
+	// 	setTimeout(function timer(){
+	// 		console.log(i);	///五个6
+	// 	},1000);
+	// }
+	// 延迟函数的回调会在循环结束时执行.
+	// 我们试图假设循环中每个迭代在运行时都会给自己"捕获"一个i的副本.但是根据作用域的工作原理,实际情况是尽管循环中五个函数实在每个迭代中分别定义的,但是它们都被封闭在共享的全局作用域中,因此只有一个i. ????
+	// 假设在循环的每个迭代中产生一个闭包作用域?
+	// for(var i = 1;i <= 5;i++){
+	// 	(function(){
+	// 		setTimeout(function timer(){
+	// 			console.log(i);
+	// 		},i*1000);
+	// 	})();
+	// }
+	// 失败....
+	// 需要定义变量,来存储每个迭代的i值
+	// for(var i = 1;i <= 5;i++){
+	// 	(function(){
+	// 		var j = i;
+	// 		setTimeout(function timer(){
+	// 			console.log(j);
+	// 		},j*1000);
+	// 	})();
+	// }
+	// for(var i = 1;i <= 5; i++){
+	// 	(function(j){
+	// 		setTimerout(function timer(){
+	// 			console.log(j);
+	// 		},j*1000);
+	// 	})(i);
+	// }
+	// 
+	// for(var i = 1;i <= 5;i ++){
+	// 	let j = i;
+	// 	setTimeout(function timer(){
+	// 		console.log(j);
+	// 	},j*1000);
+	// }
+	// 
+	for(let i = 1;i <= 5;i++){
+		setTimeout(function timer(){
+			console.log(i);
+		},i*1000);
+	}
+</script>
+</html>
